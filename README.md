@@ -50,7 +50,7 @@ There are 3 main entity classes in the generated knowledge graph, namely countri
 * Countries:
 <p align="center">
 <img src="/img/rml_country.jpg" alt="rml country" width="600">
-<img src="/img/table_country.png" alt="table country" width="425">
+<img src="/img/table_country.png" alt="table country" width="415">
 </p>
 
 * Indicators:
@@ -62,7 +62,7 @@ There are 3 main entity classes in the generated knowledge graph, namely countri
 * Annual Indicator Entries:
 <p align="center">
 <img src="/img/rml_AIE.jpg" alt="rml AIE" width="700">
-<img src="/img/table_AIE.png" alt="table AIE" width="505">
+<img src="/img/table_AIE.png" alt="table AIE" width="515">
 </p>
 
 The triple files ```output_{0-6}.nt``` were now compressed and imported into GraphDB.
@@ -98,7 +98,7 @@ The generated triples are saved into the files ```wikidata_accepted_countries.nt
 
 <p align="center">
 <img src="/img/table_overview_triples.png" alt="table overview triples" width="690">
-<img src="/img/table_interlinking_external.png" alt="table interlinking external" width="560">
+<img src="/img/table_interlinking_external.png" alt="table interlinking external" width="570">
 </p>
 
 ### Querying 
