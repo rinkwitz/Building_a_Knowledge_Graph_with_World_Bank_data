@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE LIMES SYSTEM "limes.dtd">
+<LIMES>
+<PREFIX>
+    <NAMESPACE>http://dbpedia.org/ontology/</NAMESPACE>
+    <LABEL>dbo</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://dbpedia.org/property/</NAMESPACE>
+    <LABEL>dbp</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://purl.org/dc/elements/1.1/</NAMESPACE>
+    <LABEL>dc</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://purl.org/dc/terms/</NAMESPACE>
+    <LABEL>dcterms</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://www.w3.org/2002/07/owl#</NAMESPACE>
+    <LABEL>owl</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://semweb.mmlab.be/ns/ql#</NAMESPACE>
+    <LABEL>ql</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://www.w3.org/1999/02/22-rdf-syntax-ns#</NAMESPACE>
+    <LABEL>rdf</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://www.w3.org/2000/01/rdf-schema#</NAMESPACE>
+    <LABEL>rdfs</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://semweb.mmlab.be/ns/rml#</NAMESPACE>
+    <LABEL>rml</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://www.w3.org/ns/r2rml#</NAMESPACE>
+    <LABEL>rr</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://www.w3.org/2004/02/skos/core#</NAMESPACE>
+    <LABEL>skos</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://www.w3.org/2006/time#</NAMESPACE>
+    <LABEL>time</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://worldbank.org/</NAMESPACE>
+    <LABEL>wb</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://www.wikidata.org/entity/</NAMESPACE>
+    <LABEL>wd</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://www.wikidata.org/prop/direct/</NAMESPACE>
+    <LABEL>wdt</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://www.w3.org/2001/XMLSchema#</NAMESPACE>
+    <LABEL>xsd</LABEL>
+</PREFIX>
+
+<SOURCE>
+    <ID>projectworldbank</ID>
+    <ENDPOINT>http://0.0.0.0:7200/repositories/projectworldbank</ENDPOINT>
+    <VAR>?x</VAR>
+    <PAGESIZE>5000</PAGESIZE>
+    <RESTRICTION>?x rdf:type wb:Indicator</RESTRICTION>
+    <PROPERTY>rdfs:label</PROPERTY>
+    <TYPE>sparql</TYPE>
+</SOURCE>
+    
+<TARGET>
+    <ID>factforge</ID>
+    <ENDPOINT>http://factforge.net/repositories/ff-news</ENDPOINT>
+    <VAR>?y</VAR>
+    <PAGESIZE>5000</PAGESIZE>
+    <RESTRICTION>?y rdf:type rdf:Property</RESTRICTION>
+    <PROPERTY>rdfs:label</PROPERTY>
+    <TYPE>sparql</TYPE>
+</TARGET>
+
+<METRIC>
+    JaroWinkler(x.rdfs:label, y.rdfs:label)
+</METRIC>
+
+<ACCEPTANCE>
+    <THRESHOLD>0.95</THRESHOLD>
+    <FILE>factforge_accepted_indicators.nt</FILE>
+    <RELATION>owl:sameAs</RELATION>
+</ACCEPTANCE>
+
+<REVIEW>
+    <THRESHOLD>0.93</THRESHOLD>
+    <FILE>factforge_reviewme_indicators.nt</FILE>
+    <RELATION>owl:sameAs</RELATION>
+</REVIEW>
+
+<OUTPUT>N3</OUTPUT>
+</LIMES>
