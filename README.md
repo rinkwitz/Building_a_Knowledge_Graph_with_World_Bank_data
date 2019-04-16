@@ -50,19 +50,19 @@ There are 3 main entity classes in the generated knowledge graph, namely countri
 * Countries:
 <p align="center">
 <img src="/img/rml_country.jpg" alt="rml country" width="600">
-<img src="/img/table_country.png" alt="table country" width="375">
+<img src="/img/table_country.png" alt="table country" width="425">
 </p>
 
 * Indicators:
 <p align="center">
 <img src="/img/rml_indicator.jpg" alt="rml indicator" width="800">
-<img src="/img/table_indicator.png" alt="table indicator" width="375">
+<img src="/img/table_indicator.png" alt="table indicator" width="425">
 </p>
 
 * Annual Indicator Entries:
 <p align="center">
 <img src="/img/rml_AIE.jpg" alt="rml AIE" width="700">
-<img src="/img/table_AIE.png" alt="table AIE" width="375">
+<img src="/img/table_AIE.png" alt="table AIE" width="475">
 </p>
 
 The triple files ```output_{0-6}.nt``` were now compressed and imported into GraphDB.
@@ -78,7 +78,7 @@ For interlinking the triples with already present knowledge graphs on the intern
 The software uses the Levenshtein metric in order to interlink subjects of the different knowledge graphs. It compares the objects, that are given by the  predicates in Table 4 with respect to the specified threshold.
 
 <p align="center">
-<img src="/img/table_interlinking.png" alt="table AIE" width="750">
+<img src="/img/table_interlinking.png" alt="table AIE" width="700">
 </p>
 
 The LIMES software was configured with the upcoming files. 
@@ -97,8 +97,8 @@ The generated triples are saved into the files ```wikidata_accepted_countries.nt
 ```factforge_accepted_indicators.nt``` and then imported to GraphDB. This makes a total of  <img src="https://latex.codecogs.com/gif.latex?87.350266\cdot&space;10^6" title="87.350266\cdot 10^6" />  triples in the generated knowledge graph.
 
 <p align="center">
-<img src="/img/table_overview_triples.png" alt="table overview triples" width="750">
-<img src="/img/table_interlinking_external.png" alt="table interlinking external" width="375">
+<img src="/img/table_overview_triples.png" alt="table overview triples" width="700">
+<img src="/img/table_interlinking_external.png" alt="table interlinking external" width="500">
 </p>
 
 ### Querying 
@@ -120,7 +120,7 @@ The script calculates the Spearman, Pearson, and Kendall correlation coefficient
 The Pearson correlation coefficients for the indicator pairs (AG.LND.AGRI.ZS, SI.POV.UMIC.GP), (SP.URB.TOTL, SI.POV.UMIC.GP), (SH.DYN.MORT, SI.POV.UMIC.GP), and (SP.TOTL.POP, SI.POV.UMIC.GP) were visualized in the Figures ```/img/Figure_{1-8}.png```. The indicators and their labels are given in Table 7.
 
 <p align="center">
-<img src="/img/table_indicator_label.png" alt="table indicator label" width="375">
+<img src="/img/table_indicator_label.png" alt="table indicator label" width="475">
 </p>
 
 Examples of correlation figures:
