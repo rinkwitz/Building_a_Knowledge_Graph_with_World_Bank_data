@@ -94,7 +94,7 @@ java -jar path/to/limes-core-{version}-SNAPSHOT.jar path/to/interlinking_wikidat
 ```
 
 The generated triples are saved into the files ```wikidata_accepted_countries.nt```, ```factforge_reviewme_countries.nt``` and
-```factforge_accepted_indicators.nt``` and then imported to GraphDB. This makes a total of <img src="https://latex.codecogs.com/gif.latex?87.350266\cdot 10^6" title="equation 01" /> triples in the generated knowledge graph.
+```factforge_accepted_indicators.nt``` and then imported to GraphDB. This makes a total of <img src="https://latex.codecogs.com/gif.latex?87.350266\cdot&space;10^6" title="87.350266\cdot 10^6" /> triples in the generated knowledge graph.
 
 * Overview of triples and their types:
 
