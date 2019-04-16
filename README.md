@@ -1,6 +1,6 @@
 # Building a Knowledge Graph with World Bank data
 
-With the help of data of [World Bank](http://www.worldbank.org/) I constructed a knowledge graph using various tools for builiding, interlinking and queryying. The project aims to be of help for statistical analysis of the [world development indicators](http://datatopics.worldbank.org/world-development-indicators/).
+With the help of data of [World Bank](http://www.worldbank.org/) I constructed a knowledge graph using various tools for building, interlinking and querying. The project aims to be of help for statistical analysis of the [world development indicators](http://datatopics.worldbank.org/world-development-indicators/).
 
 Within this project and its referred scripts, configuration files and queries I use the following prefixes.
 
@@ -115,7 +115,7 @@ with <img src="https://latex.codecogs.com/gif.latex?n_D(C)" title="n_D(C)" /> be
 
 The countries from the query are used in the Python script for the correlation analysis ```analysis.py```. Before running the script, ```query-result_2.csv```, ```climate_indicators.csv```, and ```poverty_indicators.csv``` have to be created using the following SPARQL queries ```SPARQL_query_B.txt``` and ```SPARQL_query_C.txt```.
 
-The script calculates the Spearman, Pearson, and Kendall correlation coefficients for every two pairwise indicators of the topics "Climate Change" and "Poverty", and for every country from the SPARQL query ```SPARQL_query_A.txt```, and saves them as a CSV file ```correlation_coefficients.csv```. The indicator pairs are filtered with the help of the script ```analyzing_results.py``` for those pairs, which were shared by all poor and rich countries and for which the absolute Pearson correlation coefficients were greater or equal than <img src="https://latex.codecogs.com/gif.latex?0.75" title="0.75" /> for at least 6 of the poor countries. I had to remove the country "Egypt, Arab Rep." because it had no shared indicators with all of the other countries. 4 of the resulting indicator pairs were visualized by the script ```correlation_figure.py```.
+The script calculates the Spearman, Pearson, and Kendall correlation coefficients for every two pairwise indicators of the topics "Climate Change" and "Poverty", and for every country from the SPARQL query ```SPARQL_query_A.txt```, and saves them as a CSV file ```correlation_coefficients.csv```. The indicator pairs are filtered with the help of the script ```analyzing_results.py``` for those pairs, which were shared by all poor and rich countries and for which the absolute Pearson correlation coefficients were greater or equal than <img src="https://latex.codecogs.com/gif.latex?0.75" title="0.75" /> for at least 6 of the poor countries. I had to remove the country "Egypt, Arab Rep." because it had no shared indicators with all the other countries. 4 of the resulting indicator pairs were visualized by the script ```correlation_figure.py```.
 
 The Pearson correlation coefficients for the indicator pairs (AG.LND.AGRI.ZS, SI.POV.UMIC.GP), (SP.URB.TOTL, SI.POV.UMIC.GP), (SH.DYN.MORT, SI.POV.UMIC.GP), and (SP.TOTL.POP, SI.POV.UMIC.GP) were visualized in the Figures ```/img/Figure_{1-8}.png```. The indicators and their labels are given in Table 7.
 
