@@ -1,0 +1,55 @@
+prefix dbo: <http://dbpedia.org/ontology/> 
+prefix dc: <http://purl.org/dc/elements/1.1/> 
+prefix dcterms: <http://purl.org/dc/terms/> 
+prefix owl: <http://www.w3.org/2002/07/owl#> 
+prefix ql: <http://semweb.mmlab.be/ns/ql#> 
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+prefix rml: <http://semweb.mmlab.be/ns/rml#> 
+prefix rr: <http://www.w3.org/ns/r2rml#> 
+prefix skos: <http://www.w3.org/2004/02/skos/core#> 
+prefix time: <http://www.w3.org/2006/time#> 
+prefix wd: <http://worldbank.org/> 
+prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+select ?countryname ?percentageDataPoints
+where {
+    filter (?percentageDataPoints > 0.1) 
+    filter (str(?countryname) != "World" && str(?countryname) != "Low & middle income" && str(?countryname) != "High income" && str(?countryname) != "Upper middle income" && str(?countryname) != "East Asia & Pacific" && str(?countryname) != "Lower middle income" &&  str(?countryname) != "Latin America & Caribbean" &&  str(?countryname) != "IDA total" &&  str(?countryname) != "Fragile and conflict affected situations" &&  str(?countryname) != "Low income")
+    {
+        #select ?countryname ((xsd:float(count(?AIE)) / xsd:float(76) / xsd:float(2018 - 1960)) as ?percentageDataPoints)
+        select ?countryname ((xsd:float(count(?AIE)) / xsd:float(25) / xsd:float(2018 - 1960)) as ?percentageDataPoints)
+        where { 
+            ?Country rdfs:label ?countryname .
+            ?Indicator rdf:type wd:Indicator .
+            #?Indicator wd:hasTopic wd:climate-change .
+            ?Indicator wd:hasTopic wd:poverty .
+            ?AIE rdf:type wd:AnnualIndicatorEntry .
+            ?AIE wd:hasIndicator ?Indicator .
+            ?AIE wd:hasCountry ?Country .
+            ?AIE owl:hasValue ?value .
+            filter (str(?value) != "")
+         
+            # preselecting countries with respect to gdp
+            {
+                select ?Country
+                where{
+                    ?Country rdf:type wd:Country .
+                    ?Country rdfs:label ?countryname .
+                    ?AIEgdp rdf:type wd:AnnualIndicatorEntry .
+                    ?AIEgdp time:year ?yeargdp .
+                    ?AIEgdp owl:hasValue ?valuegdp .
+                    ?AIEgdp wd:hasCountry ?Country .
+                    ?AIEgdp wd:hasIndicator ?Indgdp .        
+                    ?Indgdp dc:identifier ?id .
+                    filter (?yeargdp = 2017)
+                    filter (str(?valuegdp) != "")
+                    filter (?id = "NY.GDP.PCAP.CD")
+                } 
+                #ORDER BY ASC(?valuegdp)
+               	ORDER BY DESC(?valuegdp)
+            }
+        }
+        group by ?countryname
+    }
+} LIMIT 10
