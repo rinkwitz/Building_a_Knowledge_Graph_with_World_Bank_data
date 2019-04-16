@@ -56,13 +56,13 @@ There are 3 main entity classes in the generated knowledge graph, namely countri
 * Indicators:
 <p align="center">
 <img src="/img/rml_indicator.jpg" alt="rml indicator" width="800">
-<img src="/img/table_indicator.png" alt="table indicator" width="425">
+<img src="/img/table_indicator.png" alt="table indicator" width="430">
 </p>
 
 * Annual Indicator Entries:
 <p align="center">
 <img src="/img/rml_AIE.jpg" alt="rml AIE" width="700">
-<img src="/img/table_AIE.png" alt="table AIE" width="475">
+<img src="/img/table_AIE.png" alt="table AIE" width="485">
 </p>
 
 The triple files ```output_{0-6}.nt``` were now compressed and imported into GraphDB.
@@ -97,8 +97,8 @@ The generated triples are saved into the files ```wikidata_accepted_countries.nt
 ```factforge_accepted_indicators.nt``` and then imported to GraphDB. This makes a total of  <img src="https://latex.codecogs.com/gif.latex?87.350266\cdot&space;10^6" title="87.350266\cdot 10^6" />  triples in the generated knowledge graph.
 
 <p align="center">
-<img src="/img/table_overview_triples.png" alt="table overview triples" width="700">
-<img src="/img/table_interlinking_external.png" alt="table interlinking external" width="500">
+<img src="/img/table_overview_triples.png" alt="table overview triples" width="690">
+<img src="/img/table_interlinking_external.png" alt="table interlinking external" width="530">
 </p>
 
 ### Querying 
