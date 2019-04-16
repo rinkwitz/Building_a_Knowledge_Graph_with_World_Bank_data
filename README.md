@@ -49,20 +49,20 @@ There are 3 main entity classes in the generated knowledge graph, namely countri
 
 * Countries:
 <p align="center">
-<img src="/img/rml_country.png" alt="rml country" width="750">
-<img src="/img/table_country.jpg" alt="table country" width="750">
+<img src="/img/rml_country.jpg" alt="rml country" width="750">
+<img src="/img/table_country.png" alt="table country" width="750">
 </p>
 
 * Indicators:
 <p align="center">
-<img src="/img/rml_indicator.png" alt="rml indicator" width="750">
-<img src="/img/table_indicator.jpg" alt="table indicator" width="750">
+<img src="/img/rml_indicator.jpg" alt="rml indicator" width="750">
+<img src="/img/table_indicator.png" alt="table indicator" width="750">
 </p>
 
 * Annual Indicator Entries:
 <p align="center">
-<img src="/img/rml_AIE.png" alt="rml AIE" width="750">
-<img src="/img/table_AIE.jpg" alt="table AIE" width="750">
+<img src="/img/rml_AIE.jpg" alt="rml AIE" width="750">
+<img src="/img/table_AIE.png" alt="table AIE" width="750">
 </p>
 
 The triple files ```output_{0-6}.nt``` were now compressed and imported into GraphDB.
@@ -78,7 +78,7 @@ For interlinking the triples with already present knowledge graphs on the intern
 The software uses the Levenshtein metric in order to interlink subjects of the different knowledge graphs. It compares the objects, that are given by the  predicates in Table 4 with respect to the specified threshold.
 
 <p align="center">
-<img src="/img/table_interlinking.jpg" alt="table AIE" width="750">
+<img src="/img/table_interlinking.png" alt="table AIE" width="750">
 </p>
 
 The LIMES software was configured with the upcoming files. 
@@ -94,12 +94,12 @@ java -jar path/to/limes-core-{version}-SNAPSHOT.jar path/to/interlinking_wikidat
 ```
 
 The generated triples are saved into the files ```wikidata_accepted_countries.nt```, ```factforge_reviewme_countries.nt``` and
-```factforge_accepted_indicators.nt``` and then imported to GraphDB. This makes a total of <img src="https://latex.codecogs.com/gif.latex?87.350266\cdot&space;10^6" title="87.350266\cdot 10^6" /> triples in the generated knowledge graph.
+```factforge_accepted_indicators.nt``` and then imported to GraphDB. This makes a total of  <img src="https://latex.codecogs.com/gif.latex?87.350266\cdot&space;10^6" title="87.350266\cdot 10^6" />  triples in the generated knowledge graph.
 
 * Overview of triples and their types:
 
 <p align="center">
-<img src="/img/table_overview_triples.jpg" alt="table overview triples" width="750">
+<img src="/img/table_overview_triples.png" alt="table overview triples" width="750">
 </p>
 
 ### Querying 
