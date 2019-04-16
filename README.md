@@ -49,20 +49,20 @@ There are 3 main entity classes in the generated knowledge graph, namely countri
 
 * Countries:
 <p align="center">
-<img src="/img/rml_country.jpg" alt="rml country" width="750">
-<img src="/img/table_country.png" alt="table country" width="750">
+<img src="/img/rml_country.jpg" alt="rml country" width="600">
+<img src="/img/table_country.png" alt="table country" width="375">
 </p>
 
 * Indicators:
 <p align="center">
-<img src="/img/rml_indicator.jpg" alt="rml indicator" width="750">
-<img src="/img/table_indicator.png" alt="table indicator" width="750">
+<img src="/img/rml_indicator.jpg" alt="rml indicator" width="800">
+<img src="/img/table_indicator.png" alt="table indicator" width="375">
 </p>
 
 * Annual Indicator Entries:
 <p align="center">
-<img src="/img/rml_AIE.jpg" alt="rml AIE" width="750">
-<img src="/img/table_AIE.png" alt="table AIE" width="750">
+<img src="/img/rml_AIE.jpg" alt="rml AIE" width="700">
+<img src="/img/table_AIE.png" alt="table AIE" width="375">
 </p>
 
 The triple files ```output_{0-6}.nt``` were now compressed and imported into GraphDB.
@@ -98,7 +98,7 @@ The generated triples are saved into the files ```wikidata_accepted_countries.nt
 
 <p align="center">
 <img src="/img/table_overview_triples.png" alt="table overview triples" width="750">
-<img src="/img/table_interlinking_external.png" alt="table interlinking external" width="750">
+<img src="/img/table_interlinking_external.png" alt="table interlinking external" width="375">
 </p>
 
 ### Querying 
@@ -120,14 +120,14 @@ The script calculates the Spearman, Pearson, and Kendall correlation coefficient
 The Pearson correlation coefficients for the indicator pairs (AG.LND.AGRI.ZS, SI.POV.UMIC.GP), (SP.URB.TOTL, SI.POV.UMIC.GP), (SH.DYN.MORT, SI.POV.UMIC.GP), and (SP.TOTL.POP, SI.POV.UMIC.GP) were visualized in the Figures ```/img/Figure_{1-8}.png```. The indicators and their labels are given in Table 7.
 
 <p align="center">
-<img src="/img/table_indicator_label.png" alt="table indicator label" width="750">
+<img src="/img/table_indicator_label.png" alt="table indicator label" width="375">
 </p>
 
-Examples of correlation figure:
+Examples of correlation figures:
 
 <p align="center">
-<img src="/img/Figure_1.png" alt="correlation figure 1" width="750">
-<img src="/img/Figure_2.png" alt="correlation figure 2" width="750">
+<img src="/img/Figure_1.png" alt="correlation figure 1" width="850">
+<img src="/img/Figure_2.png" alt="correlation figure 2" width="850">
 </p>
 
 ## Authors
